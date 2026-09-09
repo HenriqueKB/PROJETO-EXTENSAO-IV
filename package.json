@@ -1,14 +1,15 @@
 {
   "name": "proj-extensao-iv",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Jogo de dedução social local (host + QR Codes + Socket.io) para feiras acadêmicas.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
+  "keywords": ["jogo", "deducao", "socket.io", "feira"],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.2.1",
     "socket.io": "^4.8.3"

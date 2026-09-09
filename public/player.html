@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogador — Dedução Social</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/player.js" defer></script>
+</head>
+<body class="page-player">
+  <main class="card player-card">
+    <p class="eyebrow">Seu papel é secreto</p>
+    <h1 id="titulo">Conectando…</h1>
+    <p id="subtitulo" class="hint">Não mostre esta tela para os outros.</p>
+    <div id="papelBox" class="papel" hidden></div>
+    <form id="pistaForm" hidden>
+      <label>
+        Pista por texto (opcional)
+        <input id="pistaInput" type="text" maxlength="80" placeholder="Uma palavra só…">
+      </label>
+      <button type="submit">Enviar pista ao host</button>
+    </form>
+    <section id="votoBox" hidden>
+      <h2>Quem é o impostor?</h2>
+      <div id="votoOpcoes" class="voto-opcoes"></div>
+      <p id="votoStatus" class="hint"></p>
+    </section>
+    <section id="resultadoBox" class="resultado" hidden></section>
+    <p id="playerErro" class="erro" hidden></p>
+  </main>
+</body>
+</html>

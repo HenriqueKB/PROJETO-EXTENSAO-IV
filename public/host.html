@@ -2,15 +2,55 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Jogo de Dedução</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Host — Dedução Social</title>
+  <link rel="stylesheet" href="/style.css">
   <script src="/socket.io/socket.io.js"></script>
-  <script src="qrcode.min.js"></script>
-  <script src="script.js" defer></script>
+  <script src="/qrcode.min.js"></script>
+  <script src="/host.js" defer></script>
 </head>
-<body>
-  <h1>Jogo de Dedução</h1>
-  <button id="start">Iniciar Partida</button>
-  <div id="papel"></div>
-  <div id="qrcode"></div>
+<body class="page-host">
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Feira acadêmica · execução local</p>
+      <h1>Dedução Social</h1>
+    </div>
+    <div id="metaSala" class="meta" hidden>
+      <span>Sala <strong id="roomIdLabel"></strong></span>
+      <span id="faseLabel" class="pill">Lobby</span>
+      <span id="conexoesLabel">0/0 conectados</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="setup" class="card">
+      <h2>Criar sala</h2>
+      <p>Defina as vagas. Cada QR Code é um token exclusivo para o celular do jogador.</p>
+      <label>
+        Número de vagas
+        <input id="vagasInput" type="number" min="3" max="12" value="6">
+      </label>
+      <button id="criarSalaBtn" type="button">Criar sala e gerar QRs</button>
+      <p id="setupErro" class="erro" hidden></p>
+    </section>
+
+    <section id="lobby" hidden>
+      <div class="toolbar">
+        <button id="addVagaBtn" type="button">Adicionar vaga</button>
+        <button id="iniciarBtn" type="button" class="primary">Iniciar partida</button>
+        <button id="votarBtn" type="button" hidden>Abrir votação</button>
+        <button id="encerrarVotoBtn" type="button" hidden>Encerrar votação</button>
+        <button id="reiniciarBtn" type="button" hidden>Nova rodada</button>
+      </div>
+      <p id="hostErro" class="erro" hidden></p>
+      <p id="instrucao" class="hint">Peça para cada pessoa escanear um QR diferente. O papel secreto aparece só no celular.</p>
+      <div id="pistasBox" class="card" hidden>
+        <h3>Pistas enviadas (opcional)</h3>
+        <ul id="listaPistas"></ul>
+      </div>
+      <div id="resultadoBox" class="card resultado" hidden></div>
+      <div id="qrGrid" class="qr-grid"></div>
+    </section>
+  </main>
 </body>
 </html>
