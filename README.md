@@ -2,7 +2,7 @@
 
 ## Proposta de Projeto: Desenvolvimento de um Jogo Desktop de Dedução e Espionagem para Feiras Acadêmicas
 Visão Geral do Projeto
-Trata-se de um software desenvolvido para PC (Computador/Notebook) focado em dedução, comunicação e blefe, projetado para partidas presenciais dinâmicas e interativas em um único terminal durante eventos acadêmicos.
+Trata-se de um software desenvolvido para PC (Computador/Notebook) focado em dedução, comunicação e blefe, projetado para partidas presenciais dinâmicas e interativas em um único terminal dedicado para a UPXP.
 ## Dinâmica das Rodadas no PC
  ### * Atribuição Secreta de Papéis: Na tela do computador, os jogadores alternam sua vez para visualizar sua função em segredo antes de passar a cadeira/teclado para o próximo participante.
  ### * Jogadores Comuns: Visualizam a palavra-chave da rodada no monitor.
