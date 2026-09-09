@@ -1,6 +1,6 @@
 # PROJETO-EXTENSAO-IV
 
-## Proposta de Projeto: Desenvolvimento de um Jogo Desktop de Dedução e Espionagem para Feiras Acadêmicas
+## Proposta de Projeto: Desenvolvimento de um Jogo Desktop de Dedução e Espionagem para UPXP
 Visão Geral do Projeto
 Trata-se de um software desenvolvido para PC (Computador/Notebook) focado em dedução, comunicação e blefe, projetado para partidas presenciais dinâmicas e interativas em um único terminal dedicado para a UPXP.
 ## Dinâmica das Rodadas no PC
