@@ -10,6 +10,13 @@ const TelaCadastro = ({ onIniciarJogo }) => {
     setNomeInput("")
   }
 
+const removerJogador = (indexParaRemover) => {
+  // O filter gera uma nova lista com todos os itens CUJO ÍNDICE for diferente do selecionado
+  const listaFiltrada = jogadores.filter((_, indexAtual) => indexAtual !== indexParaRemover)
+  
+  // Atualiza o estado do React com a nova lista
+  setJogadores(listaFiltrada)
+}
   const handleComecar = () => {
     if (jogadores.length < 3) {
       alert("Adicione pelo menos 3 jogadores!")
@@ -23,10 +30,8 @@ const TelaCadastro = ({ onIniciarJogo }) => {
     const handleTeclaPressionada = (evento) => {
         if (evento.key === 'Enter') {
           return adicionarJogador()
-        } else {
         }
     };
-  };
 
   return (
     <div className="tela-cadastro">
@@ -36,19 +41,25 @@ const TelaCadastro = ({ onIniciarJogo }) => {
         <input 
           type="text" 
           value={nomeInput} 
-          onChange={(e) => setNomeInput(e.target.value)}
+          onChange={(e) => setNomeInput(e.target.value)} 
+          onKeyDown = {handleTeclaPressionada}
           placeholder="Nome do jogador"
         />
 
         <button onClick={adicionarJogador}>Adicionar</button>
-        <input onKeyDown={handleTeclaPressionada}></input>
+        
       </div>
 
       <ul>
         {jogadores.map((jogador, index) => (
-          <li key={index}>{jogador}</li>
-        ))}
-      </ul>
+          <li key={index}>
+          {jogador}
+      <button onClick={() => removerJogador(index)}>
+        Remover
+      </button>
+    </li>
+  ))}
+</ul>
 
       <button onClick={handleComecar} disabled={jogadores.length < 3}>
         Iniciar Partida
@@ -56,5 +67,5 @@ const TelaCadastro = ({ onIniciarJogo }) => {
     </div>
 )
 
-
+};
 export default TelaCadastro
