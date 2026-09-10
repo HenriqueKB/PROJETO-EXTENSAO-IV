@@ -19,6 +19,15 @@ const TelaCadastro = ({ onIniciarJogo }) => {
     onIniciarJogo(jogadores) 
   }
 
+
+    const handleTeclaPressionada = (evento) => {
+        if (evento.key === 'Enter') {
+          return adicionarJogador()
+        } else {
+        }
+    };
+  };
+
   return (
     <div className="tela-cadastro">
       <h1>Cadastro de Jogadores</h1>
@@ -30,7 +39,9 @@ const TelaCadastro = ({ onIniciarJogo }) => {
           onChange={(e) => setNomeInput(e.target.value)}
           placeholder="Nome do jogador"
         />
+
         <button onClick={adicionarJogador}>Adicionar</button>
+        <input onKeyDown={handleTeclaPressionada}></input>
       </div>
 
       <ul>
@@ -43,7 +54,7 @@ const TelaCadastro = ({ onIniciarJogo }) => {
         Iniciar Partida
       </button>
     </div>
-  )
-}
+)
+
 
 export default TelaCadastro
