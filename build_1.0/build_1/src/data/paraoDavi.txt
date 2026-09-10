@@ -8,3 +8,7 @@ Evite temas complexos ou muito nichados, como jogos ou filmes.
 E verifique se as palavras estão sendo sorteadas no código, deixei
 comentários e coisas intuitivas pra facilitar a correção e adição das
 coisas que você terá que adicionar.
+
+A lógica de mostrar e sortear as palavras aleatoriamente aos jogadores 
+está incompleta e deve ser terminada por você.
+Veja o App.jsx e faça a conexão do json com o programa de facto.

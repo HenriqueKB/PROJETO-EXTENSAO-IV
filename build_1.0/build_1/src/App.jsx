@@ -12,6 +12,7 @@ function App() {
   const [jogadores, setJogadores] = useState([])
   const [etapa, setEtapa] = useState('CADASTRO') // Controla qual tela é exibida: 'CADASTRO' | 'REVELACAO' | 'DISCUSSAO' | 'VOTACAO'
   const [palavraSecreta, setPalavraSecreta] = useState('')
+  const [dicaImpostor, setDicaImpostor] = useState('')
   const [impostor, setImpostor] = useState(null)
 
   // 2. FUNÇÕES DE TRANSIÇÃO DE ETAPA
@@ -25,6 +26,8 @@ function App() {
     // Exemplo de palavra sorteada (depois isso virá do seu palavras.json)
     setPalavraSecreta('Computador')
 
+    // Exemplo de dica sorteada ao impostor
+    setDicaImpostor('Processador')
     // Avança para a próxima tela
     setEtapa('REVELACAO')
   }
