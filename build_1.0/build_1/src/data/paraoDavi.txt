@@ -1,0 +1,10 @@
+Tente seguir conforme os exemplos que deixei pra você no json
+as dicas devem seguir o padrão de serem uma palavra só, 
+e as palavras  devem ser simples, pense conforme foi dito no grupo, como um jogo de STOP.
+
+Classificações como objetos, material escolar, tecnologia
+e comida são legais ee bem gerais por exemplo.
+Evite temas complexos ou muito nichados, como jogos ou filmes.
+E verifique se as palavras estão sendo sorteadas no código, deixei
+comentários e coisas intuitivas pra facilitar a correção e adição das
+coisas que você terá que adicionar.

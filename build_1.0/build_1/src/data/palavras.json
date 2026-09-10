@@ -1,4 +1,29 @@
-{
 
+[
     
-}
+    {
+    "id": 1,
+    "categoria": "Tecnologia",
+    "palavra": "Computador",
+    "dica": "Processador"
+    },
+    {
+    "id": 2,
+    "categoria": "Material Escolar",
+    "palavra": "Estojo",
+    "dica": "Zíper"
+    },
+    {
+    "id": 3,
+    "categoria": "Alimentos",
+    "palavra": "Pizza",
+    "dica": "Italiano"
+    },
+    {
+    "id": 4,
+    "categoria": "Objetos do Cotidiano",
+    "palavra": "Garrafa",
+    "dica": "Água"
+    }
+    
+]
