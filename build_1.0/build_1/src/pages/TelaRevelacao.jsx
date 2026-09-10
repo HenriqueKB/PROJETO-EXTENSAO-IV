@@ -1,35 +1,58 @@
 import { useState } from 'react'
 
 const TelaRevelacao = ({ jogadores, impostor, palavraSecreta, onProximaEtapa }) => {
-  // 1. ESTADOS LOCAIS (apenas para controlar a navegação desta tela)
+  // 1. ESTADOS LOCAIS
   const [indexAtual, setIndexAtual] = useState(0)
   const [revelado, setRevelado] = useState(false)
 
+  // 2. VARIÁVEIS CALCULADAS
+  const jogadorDaVez = jogadores[indexAtual]
+  const ehOImpostor = jogadorDaVez === impostor
+  const ehOUltimoJogador = indexAtual === jogadores.length - 1
 
-  // 2. Funções pra checar o estado dos jogadores
+  // 3. HANDLERS
+  const handleRevelar = () => {
+    setRevelado(true)
+  }
 
-  // Descobre qual o nome do jogador da vez baseado no índice
-    const jogadorDaVez = jogadores[indexAtual]
+  const handleProximo = () => {
+    setRevelado(false)
 
-  // Verifica se o jogador da vez é o impostor
-    const ehOImpostor = jogadorDaVez === impostor
-
- // Verifica se já está no último jogador da vez
-    const ehOUltimoJogador = indexAtual === jogadores.length - 1
-
-  // Lógica dos botões de avançar e revelar 
-    const handleRevelar = () => {
-        setRevelado(true)
+    if (indexAtual === jogadores.length - 1) {
+      onProximaEtapa()
+    } else {
+      setIndexAtual(indexAtual + 1)
     }
+  } // <-- AJUSTE 1: Removida a chave extra que estava aqui!
 
-    const handleProximo = () => {
-        setRevelado(false)
+  // <-- AJUSTE 2: Adicionado o return que faltava para desenhar a tela
+  return (
+    <div className="tela-revelacao">
+      <h1>Fase de Revelação</h1>
 
-        if (indexAtual === jogadores.length - 1) {
-           onProximaEtapa() // Avanca o jogo
+      {!revelado ? (
+        <div>
+          <h2>Passe para: <strong>{jogadorDaVez}</strong></h2>
+          <button onClick={handleRevelar}>Ver Minha Função</button>
+        </div>
+      ) : (
+        <div>
+          <h2>Jogador: {jogadorDaVez}</h2>
+          
+          {ehOImpostor ? (
+            <h3>Você é o IMPOSTOR!</h3>
+            // Colocar a dica aqui!
+          ) : (
+            <h3>A palavra secreta é: {palavraSecreta}</h3>
+          )}
 
-        } else {
-            setIndexAtual(indexAtual + 1) // Passa a posição pro próximo
-        }
-        }
-};
+          <button onClick={handleProximo}>
+            {ehOUltimoJogador ? "Iniciar Discussão" : "Esconder e Passar"}
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default TelaRevelacao
