@@ -1,22 +1,40 @@
 import { useState, useEffect } from 'react'
 
 const TelaDiscussao = ({ onIrParaVotacao }) => {
-  const [tempo, setTempo] = useState(120) // 2 minutos em segundos
+  const [timeLeft, setTimeLeft] = useState(150) // 120 segundos = 2 minutos
 
   useEffect(() => {
-    // Se o tempo acabou, não precisamos criar um intervalo
-    if (tempo <= 0) return
+    if (timeLeft <= 0) return
 
-    // Cria um intervalo que roda a cada 1 segundo (1000ms)
-    const temporizador = setInterval(() => {
-      setTempo((tempoAtual) => tempoAtual - 1)
+    const timerId = setInterval(() => {
+      setTimeLeft((prev) => prev - 1)
     }, 1000)
 
-    // Limpeza: interrompe o temporizador quando o componente desmonta ou o tempo muda
-    return () => clearInterval(temporizador)
-  }, [tempo])
+    return () => clearInterval(timerId)
+  }, [timeLeft])
 
-  // Formata os segundos em MM:SS (ex: 120 vira "02:00", 65 vira "01:05")
-  const minutos = String(Math.floor(tempo / 60)).padStart(2, '0')
-  const segundos = String(tempo % 60).padStart(2, '0')
+  // Formatação rápida para exibir 02:00 em vez de apenas 120s
+  const minutos = String(Math.floor(timeLeft / 60)).padStart(2, '0')
+  const segundos = String(timeLeft % 60).padStart(2, '0')
+
+  return (
+    <div className="tela-discussao">
+      <h1>Fase de Discussão</h1>
+      <p>
+        Tentem descrever a palavra entre si, 
+        deem 3 dicas que tem relação com a palavra e 
+        descubram entre si quem é o IMPOSTOR! 
+      </p>
+
+      <div className="cronometro">
+        <h2>{minutos}:{segundos}</h2>
+      </div>
+
+      <button onClick={onIrParaVotacao}>
+        Ir para Votação
+      </button>
+    </div>
+  )
 }
+
+export default TelaDiscussao

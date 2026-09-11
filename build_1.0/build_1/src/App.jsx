@@ -44,6 +44,7 @@ function App() {
           jogadores={jogadores} 
           impostor={impostor} 
           palavraSecreta={palavraSecreta}
+          dicaImpostor={dicaImpostor} 
           onProximaEtapa={() => setEtapa('DISCUSSAO')} 
         />
       )}
