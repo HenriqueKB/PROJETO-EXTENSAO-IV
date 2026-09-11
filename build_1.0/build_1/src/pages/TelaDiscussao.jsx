@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const TelaDiscussao = ({ onIrParaVotacao }) => {
-  const [timeLeft, setTimeLeft] = useState(150) // 120 segundos = 2 minutos
-
+  const [timeLeft, setTimeLeft] = useState(150) // Ajuste de tempo
   useEffect(() => {
     if (timeLeft <= 0) return
 
@@ -13,7 +12,7 @@ const TelaDiscussao = ({ onIrParaVotacao }) => {
     return () => clearInterval(timerId)
   }, [timeLeft])
 
-  // Formatação rápida para exibir 02:00 em vez de apenas 120s
+  //Formatação rápida para exibir 02:00 em vez de apenas 120s
   const minutos = String(Math.floor(timeLeft / 60)).padStart(2, '0')
   const segundos = String(timeLeft % 60).padStart(2, '0')
 

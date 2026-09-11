@@ -45,7 +45,6 @@ const TelaRevelacao = ({ jogadores, impostor, palavraSecreta, onProximaEtapa, di
 
             <p>Sua dica é: {dicaImpostor}</p>
         </>
-            // Colocar a dica aqui!
           ) : (
             <h3>A palavra secreta é: {palavraSecreta}</h3>
             
