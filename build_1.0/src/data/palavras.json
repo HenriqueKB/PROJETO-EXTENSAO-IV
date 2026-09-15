@@ -1,29 +1,84 @@
-
 [
-    
-    {
-    "id": 1,
-    "categoria": "Tecnologia",
-    "palavra": "Computador",
-    "dica": "Processador"
-    },
-    {
-    "id": 2,
+  {
+    "categoria": "Comida",
+    "palavras": [
+      "Lasanha",
+      "Feijoada",
+      "Pizza",
+      "Hambúrguer",
+      "Coxinha",
+      "Pastel",
+      "Chocolate",
+      "Pipoca",
+      "Salada",
+      "Sopa"
+    ]
+  },
+  {
+    "categoria": "Unipar",
+    "palavras": [
+      "Biblioteca",
+      "Enfermaria",
+      "Armazém",
+      "Cantina",
+      "Secretaria",
+      "Auditório",
+      "Laboratório",
+      "Bloco"
+    ]
+  },
+  {
+    "categoria": "Profissão",
+    "palavras": [
+      "Professor",
+      "Detetive",
+      "Padeiro",
+      "Bancário",
+      "Programador",
+      "Bombeiro",
+      "Médico",
+      "Policial",
+      "Dentista"
+    ]
+  },
+  {
+    "categoria": "Objetos",
+    "palavras": [
+      "Relógio",
+      "Mochila",
+      "Chaveiro",
+      "Óculos",
+      "Garrafa",
+      "Cadeira",
+      "Celular",
+      "Espelho",
+      "Tesoura"
+    ]
+  },
+  {
     "categoria": "Material Escolar",
-    "palavra": "Estojo",
-    "dica": "Zíper"
-    },
-    {
-    "id": 3,
-    "categoria": "Alimentos",
-    "palavra": "Pizza",
-    "dica": "Italiano"
-    },
-    {
-    "id": 4,
-    "categoria": "Objetos do Cotidiano",
-    "palavra": "Garrafa",
-    "dica": "Água"
-    }
-    
+    "palavras": [
+      "Caderno",
+      "Caneta",
+      "Lápis",
+      "Borracha",
+      "Régua",
+      "Estojo",
+      "Apontador",
+      "Marcador"
+    ]
+  },
+  {
+    "categoria": "Tecnologia",
+    "palavras": [
+      "Computador",
+      "Teclado",
+      "Mouse",
+      "Monitor",
+      "Servidor",
+      "Sistema",
+      "Internet",
+      "Câmera"
+    ]
+  }
 ]
