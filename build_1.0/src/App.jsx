@@ -1,68 +1,37 @@
 import { useState } from 'react'
 import './App.css'
 
-//Import das páginas do jogo
+// 1. IMPORTAR A NOVA TELA DE REGRAS
+import TelaRegras from './pages/TelaRegras'
 import TelaCadastro from './pages/TelaCadastro'
 import TelaRevelacao from './pages/TelaRevelacao'
 import TelaDiscussao from './pages/TelaDiscussao'
 import TelaVotacao from './pages/TelaVotacao'
 
-//Import das palavras do JSON
-import dadosPalavras from './data/palavras.json'
-
 function App() {
-  //ESTADOS GLOBAIS DO JOGO
   const [jogadores, setJogadores] = useState([])
-  const [etapa, setEtapa] = useState('CADASTRO') // Etapas em sequencia: 'CADASTRO' | 'REVELACAO' | 'DISCUSSAO' | 'VOTACAO'
-  const [categoria, setCategoria] = useState('')
+  // 2. MUDAR A ETAPA INICIAL PARA 'REGRAS'
+  const [etapa, setEtapa] = useState('REGRAS') 
   const [palavraSecreta, setPalavraSecreta] = useState('')
   const [dicaImpostor, setDicaImpostor] = useState('')
   const [impostor, setImpostor] = useState(null)
 
-  //FUNÇÃO PARA INICIAR O JOGO E SORTEAR PALAVRA / o IMPOSTOR
   const handleIniciarJogo = (listaDeJogadores) => {
-    // Validação de segurança para garantir que existam jogadores
-    if (!listaDeJogadores || listaDeJogadores.length === 0) return;
-
     setJogadores(listaDeJogadores)
-
-    // a)Sortear o Impostor aleatoriamente entre os jogadores cadastrados
-    const indiceImpostor = Math.floor(Math.random() * listaDeJogadores.length)
-    setImpostor(listaDeJogadores[indiceImpostor])
-
-    // b) Sortear categoria e Palavra secreta diretamente do palavras.json
-    if (dadosPalavras && dadosPalavras.length > 0) {
-      // 1. Sortear uma categoria aleatória
-      const indiceCategoria = Math.floor(Math.random() * dadosPalavras.length)
-      const itemCategoria = dadosPalavras[indiceCategoria]
-
-      // 2. Sortear um objeto (palavra + dica) dentro da categoria sorteada
-      const indicePalavra = Math.floor(Math.random() * itemCategoria.itens.length)
-      const objetoSorteado = itemCategoria.itens[indicePalavra]
-
-      // Guardar nos estados globais
-      setCategoria(itemCategoria.categoria)
-      setPalavraSecreta(objetoSorteado.palavra)
-      setDicaImpostor(objetoSorteado.dica)
-    }
-
-    //c)avançar para a tela de revelação
+    const indiceSorteado = Math.floor(Math.random() * listaDeJogadores.length)
+    setImpostor(listaDeJogadores[indiceSorteado])
+    setPalavraSecreta('Computador')
+    setDicaImpostor('Processador')
     setEtapa('REVELACAO')
   }
 
-  // 3.função de reiniciar o jogo, um /clear
-  const handleReiniciarJogo = () => {
-    setCategoria('')
-    setPalavraSecreta('')
-    setDicaImpostor('')
-    setImpostor(null)
-    setEtapa('CADASTRO')
-  }
-
-  // 4. RENDERIZAÇÃO DA TELA ATUAL
-  //se a etapa for definida como 1, renderiza 1
   return (
     <div className="app-container">
+      {/* 3. ADICIONAR A RENDERIZAÇÃO DA TELA DE REGRAS */}
+      {etapa === 'REGRAS' && (
+        <TelaRegras onIrParaCadastro={() => setEtapa('CADASTRO')} />
+      )}
+
       {etapa === 'CADASTRO' && (
         <TelaCadastro onIniciarJogo={handleIniciarJogo} />
       )}
@@ -71,7 +40,6 @@ function App() {
         <TelaRevelacao 
           jogadores={jogadores} 
           impostor={impostor} 
-          categoria={categoria}
           palavraSecreta={palavraSecreta}
           dicaImpostor={dicaImpostor}
           onProximaEtapa={() => setEtapa('DISCUSSAO')} 
@@ -88,13 +56,11 @@ function App() {
         <TelaVotacao 
           jogadores={jogadores}
           impostor={impostor}
-          palavraSecreta={palavraSecreta}
-          onReiniciarJogo={handleReiniciarJogo}
+          onReiniciarJogo={() => setEtapa('CADASTRO')}
         />
       )}
     </div>
   )
 }
 
-//saida
 export default App
