@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const TelaRevelacao = ({ jogadores, impostor, palavraSecreta, onProximaEtapa, dicaImpostor }) => {
+const TelaRevelacao = ({ jogadores, impostor, categoria, palavraSecreta, dicaImpostor, onProximaEtapa }) => {
   // 1. ESTADOS LOCAIS
   const [indexAtual, setIndexAtual] = useState(0)
   const [revelado, setRevelado] = useState(false)
@@ -39,15 +39,16 @@ const TelaRevelacao = ({ jogadores, impostor, palavraSecreta, onProximaEtapa, di
         <div>
           <h2>Jogador: {jogadorDaVez}</h2>
           
-          {ehOImpostor ? (
-        <>
-            <h3>Você é o IMPOSTOR!</h3>
+          {/* Exibição da categoria comum a todos os jogadores */}
+          <p><strong>Categoria:</strong> {categoria}</p>
 
-            <p>Sua dica é: {dicaImpostor}</p>
-        </>
+          {ehOImpostor ? (
+            <>
+              <h3>Você é o IMPOSTOR!</h3>
+              <p>Sua dica é: {dicaImpostor}</p>
+            </>
           ) : (
             <h3>A palavra secreta é: {palavraSecreta}</h3>
-            
           )}
 
           <button onClick={handleProximo}>

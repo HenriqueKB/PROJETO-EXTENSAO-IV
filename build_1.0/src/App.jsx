@@ -16,6 +16,7 @@ function App() {
   const [etapa, setEtapa] = useState('CADASTRO') // Etapas em sequencia: 'CADASTRO' | 'REVELACAO' | 'DISCUSSAO' | 'VOTACAO'
   const [categoria, setCategoria] = useState('')
   const [palavraSecreta, setPalavraSecreta] = useState('')
+  const [dicaImpostor, setDicaImpostor] = useState('')
   const [impostor, setImpostor] = useState(null)
 
   //FUNÇÃO PARA INICIAR O JOGO E SORTEAR PALAVRA / o IMPOSTOR
@@ -35,13 +36,14 @@ function App() {
       const indiceCategoria = Math.floor(Math.random() * dadosPalavras.length)
       const itemCategoria = dadosPalavras[indiceCategoria]
 
-      // 2. Sortear uma palavra dentro da categoria sorteada
-      const indicePalavra = Math.floor(Math.random() * itemCategoria.palavras.length)
-      const palavraSorteada = itemCategoria.palavras[indicePalavra]
+      // 2. Sortear um objeto (palavra + dica) dentro da categoria sorteada
+      const indicePalavra = Math.floor(Math.random() * itemCategoria.itens.length)
+      const objetoSorteado = itemCategoria.itens[indicePalavra]
 
       // Guardar nos estados globais
       setCategoria(itemCategoria.categoria)
-      setPalavraSecreta(palavraSorteada)
+      setPalavraSecreta(objetoSorteado.palavra)
+      setDicaImpostor(objetoSorteado.dica)
     }
 
     //c)avançar para a tela de revelação
@@ -52,6 +54,7 @@ function App() {
   const handleReiniciarJogo = () => {
     setCategoria('')
     setPalavraSecreta('')
+    setDicaImpostor('')
     setImpostor(null)
     setEtapa('CADASTRO')
   }
@@ -70,6 +73,7 @@ function App() {
           impostor={impostor} 
           categoria={categoria}
           palavraSecreta={palavraSecreta}
+          dicaImpostor={dicaImpostor}
           onProximaEtapa={() => setEtapa('DISCUSSAO')} 
         />
       )}
@@ -94,4 +98,3 @@ function App() {
 
 //saida
 export default App
-
