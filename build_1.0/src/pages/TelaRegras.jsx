@@ -1,7 +1,7 @@
 const TelaRegras = ({ onIrParaCadastro }) => {
   return (
     <div className="tela-regras">
-      <h1>Regras do Jogo</h1>
+      <h1>Regras do Jogo WhoPostor</h1>
 
       <div className="lista-regras">
         <ul>
