@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../App.css';
 
 const TelaVotacao = ({ jogadores, impostor, onReiniciarJogo }) => {
   const [suspeitoEscolhido, setSuspeitoEscolhido] = useState(null)

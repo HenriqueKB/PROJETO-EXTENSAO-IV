@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import '../App.css';
 
 const TelaDiscussao = ({ onIrParaVotacao }) => {
   const [timeLeft, setTimeLeft] = useState(150) // Ajuste de tempo

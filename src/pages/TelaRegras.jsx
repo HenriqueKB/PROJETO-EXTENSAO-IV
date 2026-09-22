@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import '../App.css';
 
 const TelaRegras = ({ onIrParaCadastro }) => {
   const audioRef = useRef(null);
