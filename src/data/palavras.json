@@ -1,0 +1,84 @@
+[
+  {
+    "categoria": "Comida",
+    "itens": [
+      { "palavra": "Lasanha", "dica": "Camadas" },
+      { "palavra": "Feijoada", "dica": "Linguiça" },
+      { "palavra": "Pizza", "dica": "Forno" },
+      { "palavra": "Hambúrguer", "dica": "Pão" },
+      { "palavra": "Coxinha", "dica": "Recheio" },
+      { "palavra": "Pastel", "dica": "Feira" },
+      { "palavra": "Chocolate", "dica": "Cacau" },
+      { "palavra": "Pipoca", "dica": "Cinema" },
+      { "palavra": "Salada", "dica": "Folhas" },
+      { "palavra": "Sopa", "dica": "Caldo" }
+    ]
+  },
+  {
+    "categoria": "Unipar",
+    "itens": [
+      { "palavra": "Biblioteca", "dica": "Silêncio" },
+      { "palavra": "Enfermaria", "dica": "Socorro" },
+      { "palavra": "Armazém", "dica": "Estoque" },
+      { "palavra": "Cantina", "dica": "Lanche" },
+      { "palavra": "Secretaria", "dica": "Matrícula" },
+      { "palavra": "Auditório", "dica": "Palestra" },
+      { "palavra": "Laboratório", "dica": "Jaleco" },
+      { "palavra": "Bloco", "dica": "Prédio" }
+    ]
+  },
+  {
+    "categoria": "Profissão",
+    "itens": [
+      { "palavra": "Professor", "dica": "Quadro" },
+      { "palavra": "Detetive", "dica": "Pista" },
+      { "palavra": "Padeiro", "dica": "Forno" },
+      { "palavra": "Bancário", "dica": "Cofre" },
+      { "palavra": "Programador", "dica": "Código" },
+      { "palavra": "Bombeiro", "dica": "Mangueira" },
+      { "palavra": "Médico", "dica": "Estetoscópio" },
+      { "palavra": "Policial", "dica": "Sirene" },
+      { "palavra": "Dentista", "dica": "Cadeira" }
+    ]
+  },
+  {
+    "categoria": "Objetos",
+    "itens": [
+      { "palavra": "Relógio", "dica": "Horas" },
+      { "palavra": "Mochila", "dica": "Zíper" },
+      { "palavra": "Chaveiro", "dica": "Porta" },
+      { "palavra": "Óculos", "dica": "Lentes" },
+      { "palavra": "Garrafa", "dica": "Tampa" },
+      { "palavra": "Cadeira", "dica": "Assento" },
+      { "palavra": "Celular", "dica": "Bateria" },
+      { "palavra": "Espelho", "dica": "Reflexo" },
+      { "palavra": "Tesoura", "dica": "Lâminas" }
+    ]
+  },
+  {
+    "categoria": "Material Escolar",
+    "itens": [
+      { "palavra": "Caderno", "dica": "Espiral" },
+      { "palavra": "Caneta", "dica": "Tinta" },
+      { "palavra": "Lápis", "dica": "Grafite" },
+      { "palavra": "Borracha", "dica": "Macia" },
+      { "palavra": "Régua", "dica": "Centímetros" },
+      { "palavra": "Estojo", "dica": "Zíper" },
+      { "palavra": "Apontador", "dica": "Lâmina" },
+      { "palavra": "Marcador", "dica": "Destaque" }
+    ]
+  },
+  {
+    "categoria": "Tecnologia",
+    "itens": [
+      { "palavra": "Computador", "dica": "Gabinete" },
+      { "palavra": "Teclado", "dica": "Digitar" },
+      { "palavra": "Mouse", "dica": "Clique" },
+      { "palavra": "Monitor", "dica": "Resolução" },
+      { "palavra": "Servidor", "dica": "Nuvem" },
+      { "palavra": "Sistema", "dica": "Software" },
+      { "palavra": "Internet", "dica": "Conexão" },
+      { "palavra": "Câmera", "dica": "Lente" }
+    ]
+  }
+]
