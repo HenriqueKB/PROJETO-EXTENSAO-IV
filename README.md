@@ -6,4 +6,3 @@
 ### Discussão: O grupo debate por 2 minutos, onde cada um deve dar uma dica sobre a palavra sorteada, enquanto o impostor tenta acompanhar sem se revelar.
 ### Votação: O grupo escolhe o acusado final para então encerrar o jogo e descobrir quem era o impostor.
 
-## Agradecimento aos colaboradores:
