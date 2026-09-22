@@ -42,16 +42,16 @@ const TelaRegras = ({ onIrParaCadastro }) => {
         Iniciar investigação
       </button>
 
-      <img src="imgs/a55f4b38343887.575ea9067bd4e.gif" alt="Gif" className="gif-topo" />
+      <img src="public/imgs/a55f4b38343887.575ea9067bd4e.gif" alt="Gif" className="gif-topo" />
 
       <div className="disco" onClick={alternarAudio}>
         <img
-          src="imgs/disco.png"
+          src="public/imgs/disco.png"
           alt="Disco de vinil"
           className={tocando ? 'girando' : ''}
         />
         <audio ref={audioRef}>
-          <source src="imgs/Sarah - Jesse Harlin (youtube).mp3" />
+          <source src="public/imgs/Sarah - Jesse Harlin (youtube).mp3" />
         </audio>
       </div>
 
