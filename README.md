@@ -1,4 +1,4 @@
-# WhoPostor: Um Jogo De Dedução Social Em Navegador
+# WhoPostor: Um Jogo De Dedução E Blefe 
 
 ## Link do Jogo:  https://henriquekb.github.io/WhoPostor/
 
