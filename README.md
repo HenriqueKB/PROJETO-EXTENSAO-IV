@@ -1,7 +1,9 @@
-# Manual Do Colaborador
-## Onde eu mexo?
-### Vocês usarão a pasta build_1.0, será onde nosso projeto ficará.
-## O que eu faço?
-### Conforme os papéis definidos, Davi ficará com a parte das palavras e Igor ficará com a estilização, deixei um .txt para ambos explicando a visão de como o site deve estar e um exemplo do que fazer.
-## Quando fazeer?
-### Temos que entregar até 23/9, então o site DEVE ficar pronto até antes da UPXP, 1 dia antes pelo menos.
+# WhoPostor: Um Jogo De Dedução Social Em Navegador
+## Regras:
+### Objetivo: Os inocentes devem descobrir o Impostor, enquanto ele tenta se camuflar.
+### Funções: Cada participante verá sua função em segredo no modo hot-seat.
+### Dicas: Os inocentes recebem a palavra secreta; o Impostor recebe apenas uma dica genérica.
+### Discussão: O grupo debate por 2 minutos, onde cada um deve dar uma dica sobre a palavra sorteada, enquanto o impostor tenta acompanhar sem se revelar.
+### Votação: O grupo escolhe o acusado final para então encerrar o jogo e descobrir quem era o impostor.
+
+## Agradecimento aos colaboradores:
