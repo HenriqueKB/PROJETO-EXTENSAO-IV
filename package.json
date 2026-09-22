@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://seu-usuario.github.io/nome-do-seu-repositorio",
+  "homepage": "https://henriquekb.github.io/WhoPostor/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
